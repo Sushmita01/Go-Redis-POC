@@ -154,14 +154,6 @@ func main() {
     "rpcFile": "rpc451032526US",
     "l2aFile": "l2a451032526US"
   }`)
-
-	setCRIDArray(c redis.Conn,cridArr []string)
-
-
-
-
-
-
 }
 
 func newPool() *redis.Pool {
@@ -209,16 +201,5 @@ func setConfig(c redis.Conn,crid string,config string) error {
 return nil
 }
 
-
-func setCRIDArray(c redis.Conn,cridArr []string) error {
-
-	_, error := c.Do("SET", "cridList", cridArr)
-	if error != nil {
-		return error
-	}
-
-
-	return nil
-}
 
 
