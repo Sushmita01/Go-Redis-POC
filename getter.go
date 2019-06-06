@@ -8,10 +8,6 @@ import (
 
 func main() {
 
-	engine.Simulate("resources/data.csv")
-
-
-
 	pool := newPool()
 
 	conn := pool.Get()
